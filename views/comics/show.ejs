@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= comic.name %></title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1><%= comic.name %></h1>
+    <div class="standard-list">
+        <p>Current Status: <%= comic.status %></p>
+
+        <a href="/users/<%= user._id %>/comic-list/<%= comic._id %>/edit">
+            Edit this Comic
+        </a>
+
+        <form action="/users/<%= user._id %>/comic-list/<%= comic._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete this comic</button>
+        </form>
+    </div>
+</body>
+
+</html>

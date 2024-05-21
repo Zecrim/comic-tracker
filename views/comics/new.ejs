@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Add New Comic</title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <form action="/users/<%=user._id%>/comic-list" method="POST" class="standard-list">
+        <label for="name">Comic Name</label>
+        <input type="text" name="name" id="name" required />
+        <br>
+        <label for="comicId">Comicvine API Key</label>
+        <input type="text" name="comicId" id="comicId" />
+        <br>
+        <label for="status">Status:</label>
+        <select name="status" id="status" required >
+            <option value="plan-to-read">Plan to Read</option>
+            <option value="reading">Reading</option>
+            <option value="completed">Completed</option>
+            <option value="dropped">Dropped</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Add Listing</button>
+    </form>
+</body>
+
+</html>

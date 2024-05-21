@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Jersey+25&family=Nova+Round&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:aliceblue;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  background-color: rgb(1, 4, 9);
+}
+
+.navbar {
+  background-color: rgb(40, 182, 218);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  font-family: 'Nova Round', sans-serif;
+}
+
+#logo {
+  color: black;
+  background-color: rgb(40, 182, 218);
+  font-family: 'Faster One', sans-serif;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  background-color: rgb(40, 182, 218);
+  display: inline-block;
+  padding: 0 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3 ease 0s;
+}
+.nav-links li a:hover {
+  color:aqua;
+}
+
+#welcome {
+  padding-top: 30vh;
+}
+
+h1 {
+  font-family: 'Jersey 25';
+  text-align: center;
+  font-size: 7rem;
+}
+
+#list-button {
+  background-color: rgb(40, 182, 218);
+  padding: 2%;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 4% 42%;
+  font-size: 2.5rem;
+  font-family: Nunito, sans-serif;
+}
+#add {
+  display: inline-flex;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  bottom:0;
+  background-color: rgb(40, 182, 218);
+  border-radius: 50%;
+  color: black;
+  padding: 1%;
+  margin: 1%;
+  text-decoration: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+
+.comic-list {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 3%;
+  padding: 1%;
+  background-color: rgb(25, 26, 26);
+  border-radius: 25px;
+
+}
+.comic-list li  {
+  display:flex;
+  justify-content: space-around;
+  padding: 1% 0;
+  font-family: Nunito, sans-serif;
+  font-size: 2.5rem;
+}
+.comic-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: all 0.3 ease 0s;
+  font-family: Nunito, sans-serif;
+}
+
+.comic-list li a:hover {
+  color: aqua;
+}
+
+
+
+.standard-list {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 40%;
+  padding: 5% 5%;
+  background-color: rgb(25, 26, 26);
+  border-radius: 25px;
+  font-family: Nunito, sans-serif;
+}
+.standard-list input {
+  margin: 0 0 8% 0;
+  color: black;
+
+}
+.standard-list button {
+  background-color: rgb(40, 182, 218);
+  margin: 8% 0;
+  padding: 2%;
+  border: none;
+  color: black;
+  border-radius: 25px;
+  font-family: Nunito, sans-serif;
+}
+.standard-list select {
+  margin: 0 0 8% 0;
+  color: black;
+}
+
+.standard-list button:hover {
+  color: aqua;
+  cursor: pointer;
+}
+.standard-list a:hover {
+  color: aqua;
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Comic List</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1><%= currentPage.username %>'s Comic List</h1>
+
+
+    <% if (currentUser._id.equals(currentPage._id) ) { %>
+        <ul class="comic-list">
+            <% comics.forEach((comic)=>{ %>
+            <li>
+                <a href="/users/<%= user._id %>/comic-list/<%= comic._id %>">
+                    <%= comic.name %>
+                </a>
+            </li>
+            <% }) %>
+        </ul>
+        <a id="add" href="/users/<%=user._id%>/comic-list/new">+</a>
+    <% } else { %>
+        <% comics.forEach((comic)=>{ %>
+        <ul class="comic-list">
+            <li>
+                    <%= comic.name %>
+            </li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+
+</body>
+</html>
