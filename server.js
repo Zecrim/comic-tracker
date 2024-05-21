@@ -38,7 +38,10 @@ const usersController = require('./controllers/users.js');
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
-app.use(morgan('dev'))
+
+if (process.env.ON_HERKOU === 'false') {
+  app.use(morgan('dev'))
+}
 // Used to parse request bodies from PUT/PATCH/POST requests
 app.use(express.urlencoded({ extended: false }))
 // Allow HTML forms to send PUT/DELETE requests instead of just GET or POST
@@ -64,8 +67,6 @@ app.get('/users/:userId/comic-list', async (req, res) => {
     
   const currentUser = await User.findById(req.session.user._id);
   const currentPage = await User.findById(req.params.userId)
-  console.log(currentPage)
-  console.log(currentUser)
   res.render('comics/index', { comics: currentPage.comic, currentUser: currentUser, currentPage: currentPage})
 })
 

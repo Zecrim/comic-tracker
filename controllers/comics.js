@@ -15,7 +15,6 @@ router.post('/', async (req, res) => {
   try {
       // Look up the currently logged in user by using req.session
       const currentUser = await User.findById(req.session.user._id);
-      console.log(req.body)
       currentUser.comic.push(req.body);
       // Save the changes made to the user document
       await currentUser.save();
